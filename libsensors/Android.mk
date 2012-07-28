@@ -17,6 +17,8 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),marvelc)
 
+# HAL module implemenation, not prelinked, and stored in
+# hw/<SENSORS_HARDWARE_MODULE_ID>.<ro.product.board>.so
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := sensors.marvelc
@@ -27,17 +29,17 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_CFLAGS := -DLOG_TAG=\"Sensors\"
 LOCAL_SRC_FILES := \
-    sensors.c \
-    nusensors.cpp \
-    InputEventReader.cpp \
-    SensorBase.cpp \
-    LightSensor.cpp \
-    ProximitySensor.cpp \
-    AkmSensor.cpp
-				
+		sensors.c \
+		nusensors.cpp \
+		InputEventReader.cpp \
+		SensorBase.cpp \
+		LightSensor.cpp \
+		ProximitySensor.cpp \
+		AkmSensor.cpp
+
 LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)
 
-endif
+endif # !TARGET_SIMULATOR

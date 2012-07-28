@@ -1,39 +1,73 @@
 #
-# system.prop for marvelc
+#system.prop marvelc
 #
 
-# View configuration for QVGA.
-view.fading_edge_length=8
-view.touch_slop=15
-view.minimum_fling_velocity=25
-view.scroll_friction=0.008
+com.qc.hardware=true
+com.qc.hdmi_out=false
 
-# Modify MMS APN retry timer from 5s to 2s.
-ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
- 
-wifi.interface = eth0
-wifi.supplicant_scan_interval = 150
- 
-# Allow or deny tethering.
-ro.tether.denied=false
- 
-# Enable Google-specific location features,
-# like NetworkLocationProvider and LocationCollector.
-ro.com.google.locationfeatures=1
- 
-# The OpenGL ES API level that is natively supported by this device.
-# This is a 16.16 fixed point number.
-ro.opengles.version=262144
- 
-# Performance settings.
-dalvik.vm.execution-mode=int:jit
+
+debug.sf.hw=1
+debut.enabletr=false
+debug.composition.type=mdp
+debug.gr.numframebuffers=2
+debug.qctwa.statusbar=1
+debug.qctwa.preservebuf=1
+debug.camcorder.disablemeta = 1
+
+DEVICE_PROVISIONED=1
+
+hwui.render_dirty_regions=false
+hwui.disable_vsync=true
+hwui.print_config=choice
+
+gsm.sim.operator.iso-country=us
+gsm.operator.iso-country=us
+
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=false
+media.stagefright.enable-scan=false
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+
 persist.sys.use_dithering=1
-persist.sys.purgeable_assets=0
-ro.kernel.android.checkjni=1
+persist.sys.usb.config=mass_storage,adb
+persist.service.adb.enable=1
 
-# AOLC
-htc.audio.alc.enable = true
- 
+dalvik.vm.dexopt-data-only=1
+
+# View configuration for QVGA
+view.fading_edge_length = 8
+view.touch_slop = 15
+view.minimum_fling_velocity = 100
+view.scroll_friction = 0.000
+
+# For no auto focus devices
+ro.workaround.noautofocus = 1
+
+
+# default value of brightness
+settings.display.brightness=143
+
+# Release Bluetooth HW/SW information
+ro.bt.chipset	= Broadcom BCM4329-B1
+ro.bt.version	= Bluetooth 2.1 + EDR
+ro.bt.stack	= Broadcom BTL-A
+ro.bt.stack.version	= 2.2.017
+#0x10000010010100100000011 represent bt profile list
+ro.bt.profiles	= 4270339
+
+# Properties of BTLA stack
+service.brcm.bt.activation = 0
+service.brcm.bt.srv_active = 0
+service.brcm.bt.hcid_active = 0
+service.brcm.bt.btld = 0
+service.brcm.bt.btld_pid = 0
+service.brcm.bt.avrcp_pass_thru = 1
+service.brcm.bt.avrcp_toggle = 1
+service.brcm.bt.local_name = marvelc
+ro.bt.bdaddr_path=/data/misc/bd_addr
+
 # Following property will be reference by Settings.
 ro.product.processor=600MHz
 ro.product.ram=512MB
@@ -43,5 +77,27 @@ ro.product.front_camera=NA
 ro.product.bluetooth= 3.0
 ro.product.wifi = 802.11 b/g/n
 
-# Increase SKIA decode memory capability for progressive jpg file.
-ro.media.dec.jpeg.memcap=20000000
+# update the acoustic table for Buzz NEL lab testing
+ro.ril.update.acoustic.table = 1
+htc.audio.alc.enable = true
+
+ro.cdma.voicemail.number=mine
+
+# improve image and video quality (when taking pics and vids from cam and showing them in gallery)
+ro.media.enc.jpeg.quality=100
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+debug.performance.tuning=1
+video.accelerate.hw=1
+
+#depper deep sleep
+pm.sleep_mode=1
+
+# More accurate touch
+movfilter=40
+move hyst=0
+ 
+# Faster transfer rate for net connections
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+ro.media.enc.hprof.vid.bps=8000000

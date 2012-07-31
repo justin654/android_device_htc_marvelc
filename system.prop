@@ -7,19 +7,9 @@ view.fading_edge_length=8
 view.touch_slop=15
 view.minimum_fling_velocity=25
 view.scroll_friction=0.008
-
-# Modify MMS APN retry timer from 5s to 2s.
-ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
  
 wifi.interface = eth0
 wifi.supplicant_scan_interval = 150
- 
-# Allow or deny tethering.
-ro.tether.denied=false
- 
-# Enable Google-specific location features,
-# like NetworkLocationProvider and LocationCollector.
-ro.com.google.locationfeatures=1
  
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number.

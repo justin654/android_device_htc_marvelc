@@ -1,3 +1,8 @@
+# CDMA radio interface MUX
+/dev/ts0710mux*           0640   radio      radio
+/dev/ppp                  0660   radio      vpn
+/dev/tun                  0660   vpn        vpn
+
 /dev/system_bus_freq    0660    system      system
 /dev/cpu_dma_latency    0660    system      system
 

@@ -1,3 +1,0 @@
-require board=marvelc
-require version-bootloader=*
-require version-baseband=*

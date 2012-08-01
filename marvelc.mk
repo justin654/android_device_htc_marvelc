@@ -30,6 +30,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
 
+#CDMA Telephony Network
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.default_network=4
+
 #Device identifier (must come after all inclusions)
 PRODUCT_DEVICE := marvelc
 PRODUCT_NAME := htc_marvelc
@@ -39,9 +43,9 @@ PRODUCT_MANUFACTURER := HTC
 
 #Keylayouts
 PRODUCT_COPY_FILES += \
-    device/htc/marvelc/key/marvelc-keypad.kl:system/usr/keylayout/marvelc-keypad.kl \
-    device/htc/marvelc/key/marvelc-keypad.kcm.bin:system/usr/keychars/marvelc-keypad.kcm.bin \
-    device/htc/marvelc/key/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl
+    device/htc/marvelc/prebuilt/root/system/usr/keylayout/marvelc-keypad.kl:system/usr/keylayout/marvelc-keypad.kl \
+    device/htc/marvelc/prebuilt/root/system/usr/keylayout/marvelc-keypad.kcm.bin:system/usr/keychars/marvelc-keypad.kcm.bin \
+    device/htc/marvelc/prebuilt/root/system/usr/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl
 
 #Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -85,6 +89,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.gprsclass=12 \
     ro.ril.disable.power.collapse=1 \
     mobiledata.interfaces=rmnet0,rmnet1,rmnet2 \
-    ro.telephony.default_network=4 \
     ro.ril.disable.fd.plmn.prefix=23402,23410,23411 \
     ro.ril.update.acoustic.table = 1

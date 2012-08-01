@@ -28,12 +28,19 @@ USE_CAMERA_STUB := false
 BOARD_USE_FROYO_LIBCAMERA := true
 
 # inherit from the proprietary version
--include vendor/htc/marvel/BoardConfigVendor.mk
+-include vendor/htc/marvelc/BoardConfigVendor.mk
 
 # inherit from the common folder
 -include device/htc/marvel_common/BoardConfigCommon.mk
 
+#Gps
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := marvelc
+
+#Board name
 TARGET_BOOTLOADER_BOARD_NAME := marvelc
-TARGET_PREBUILT_KERNEL := device/htc/marvelc/prebuilt/kernel
+
+#Kernel
+TARGET_PREBUILT_KERNEL := device/htc/marvelc/prebuilt/root/kernel
+
+#Custom Graphics
 BOARD_CUSTOM_GRAPHICS := ../../../device/htc/marvel_common/recovery/graphics.c

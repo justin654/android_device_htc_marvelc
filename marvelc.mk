@@ -51,13 +51,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=4
 
-#Device identifier (must come after all inclusions)
-PRODUCT_DEVICE := marvelc
-PRODUCT_NAME := htc_marvelc
-PRODUCT_BRAND := htc
-PRODUCT_MODEL := HTC Wildfire S
-PRODUCT_MANUFACTURER := HTC
-
 #EMMC Phone Storage
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.phone_storage = 0
@@ -87,7 +80,7 @@ PRODUCT_PACKAGES += \
     gps.marvelc \
     lights.marvelc \
     sensors.marvelc \
-	copybit.msm7k \
+    copybit.msm7k \
     gralloc.msm7k \
     libOmxCore \
     librs_jni
@@ -148,3 +141,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.dec.vid.wmv.enabled=1 \
     dalvik.vm.dexopt-flags=m=y \
     ro.config.sync=yes
+	
+#Device identifier (must come after all inclusions)
+PRODUCT_DEVICE := marvelc
+PRODUCT_NAME := htc_marvelc
+PRODUCT_BRAND := htc
+PRODUCT_MODEL := HTC Wildfire S
+PRODUCT_MANUFACTURER := htc

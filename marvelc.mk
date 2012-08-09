@@ -73,7 +73,7 @@ PRODUCT_COPY_FILES += \
 
 #Media Profiles
 PRODUCT_COPY_FILES += \
-    device/htc/marvel_common/prebuilt/root/system/etc/media_profiles.xml:system/etc/media_profiles.xml
+    device/htc/marvelc/prebuilt/root/system/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 #Marvelc libs
 PRODUCT_PACKAGES += \

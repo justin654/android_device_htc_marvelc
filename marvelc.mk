@@ -98,8 +98,8 @@ PRODUCT_COPY_FILES += \
 
 #Ramdisk Files
 PRODUCT_COPY_FILES += \
-    device/htc/marvelc/ueventd.marvelc.rc:root/ueventd.marvelc.rc\
-    device/htc/marvelc/init.marvelc.rc:root/init.marvelc.rc
+    device/htc/marvelc/prebuilt/root/ueventd.marvelc.rc:root/ueventd.marvelc.rc\
+    device/htc/marvelc/prebuilt/root/init.marvelc.rc:root/init.marvelc.rc
 
 #Fstab
 PRODUCT_COPY_FILES += \

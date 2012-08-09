@@ -143,7 +143,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.sync=yes
 	
 #Device identifier (must come after all inclusions)
-PRODUCT_DEVICE := marvelc
+PRODUCT_DEVICE := htc_marvelc
 PRODUCT_NAME := htc_marvelc
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := HTC Wildfire S

@@ -54,7 +54,7 @@ BOARD_VENDOR_USE_AKMD := akm8975
 
 #Graphics
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
-BOARD_EGL_CFG := device/htc/marvelc/egl.cfg
+BOARD_EGL_CFG := device/htc/marvelc/prebuilt/egl.cfg
 BOARD_NO_RGBX_8888 := true
 
 #JS Engine
